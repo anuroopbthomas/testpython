@@ -2,10 +2,10 @@ import sys
 
 version = "1.0"
 i = "0"
-fileintial = open("gallonsleft" + i + ".txt","r")
+fileintial = open("gallons/gallonsleft" + i + ".txt","r")
 intial = int(fileintial.read())
 if intial < 30:
-    file = open("gallonsleft" + i + ".txt","w")
+    file = open("gallons/gallonsleft" + i + ".txt","w")
     file.write("20")
     file.close()
 
@@ -29,7 +29,7 @@ while gallonsBLeft > 0:
     print(round(gallons, 2), "gallons")
 
 
-    file2 = open("gallonsleft" + str(i) + ".txt", "r")
+    file2 = open("gallons/gallonsleft" + str(i) + ".txt", "r")
     gallonsBLeft = float(file2.read())
     print("This is how many gallons you had", round(gallonsBLeft,2))
     gallonsBLeft = gallonsBLeft - gallons
@@ -37,7 +37,7 @@ while gallonsBLeft > 0:
     file2.close()
 
     i = int(i) + 1
-    file3 = open("gallonsleft" + str(i) + ".txt", "w")
+    file3 = open("gallons/gallonsleft" + str(i) + ".txt", "w")
     file3.write(str(gallonsBLeft))
     file3.close()
 
